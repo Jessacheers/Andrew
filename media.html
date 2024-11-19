@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - Jessa Fayer's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 3rem;
+        }
+        .sidebar {
+            position: fixed;
+            width: 150px; /* Reduced the width from 200px to 150px */
+            height: 100%;
+            background-color: #333;
+            padding-top: 20px;
+            float: left;
+        }
+        .sidebar a {
+            text-decoration: none;
+            display: block;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 170px; /* Adjusted margin to fit the smaller sidebar */
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .photo-grid img {
+            max-width: 300px;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+        video {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jessa Fayer</h1>
+    </header>
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="media.html">Gallery</a>
+        <a href="digitals.html">Digitals</a>
+        <a href="skills.html">Skills & Resume</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="content">
+        <div id="media" class="section">
+            <h2>Media</h2>
+            <div class="gallery">
+                <h3>Photos</h3>
+                <div class="photo-grid">
+                    
+                <div class="photo-grid">
+                    <img src="Jessa Fayer.png" alt="Photo 1" class="clickable">
+                    <img src="Jessa Fayer copy.png" alt="Photo 2" class="clickable highlight">
+                    <img src="2 copy.png" alt="Photo 24" class="clickable">
+                    <img src="IMG_2759.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_7945.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_0184 copy" alt="Photo 36" class="clickable">
+                    <img src="IMG_5444.jpg" alt="Photo 36" class="clickable">
+                    <img src="AJ3A9551.jpg" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 53.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 49.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 25.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6857.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6852.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6888.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_6727 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6898.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6767.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_8333.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1291.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1299.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1305.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1320.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1289.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2660.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2659.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4392.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_1802.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1803.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1805.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1800.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1773.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2983.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2982.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2844.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_2848.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3559.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_2847.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_2234.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3517.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3506.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3505.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3504.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4304.JPG" alt="Photo 36" class="clickable">
+                    <img src="77086F7F-7539-435D-B6FD-9DFEAF2F64A5.JPEG" alt="Photo 36" class="clickable">
+                    <img src="1309DF95-8923-4929-8E88-D8C07A88F6AB.JPEG" alt="Photo 36" class="clickable">
+                    <img src="D86FDFF4-8D60-4B62-AEFF-9C1BBBB512C5.JPEG" alt="Photo 36" class="clickable">
+                    <img src="IMG_3512.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4659.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4660.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_7974.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_7975.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_7963.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_7970.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_7966.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_7968.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4781.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2281.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4300 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4303 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4302 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_3997 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_3994 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_3996 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4886.JPG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 49.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4883.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4880.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4881.jpg" alt="Photo 36" class="clickable">
+                    <img src="865550E3-EBA9-4003-BBF7-AE0BA55D0441 2.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6918.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6923.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6921.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6926.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6920.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_210626_0.PNG" alt="Photo 36" class="clickable">
+                    <img src="1AD9999A-063B-4BE8-8FC0-9F7362CA1149.JPEG" alt="Photo 36" class="clickable">
+                    <img src="034CE847-034D-4B01-9420-1B2C7A5520A3.JPEG" alt="Photo 36" class="clickable">
+                    <img src="9903B816-BDEE-4FA6-BFD9-38DDEB2D2909.JPEG" alt="Photo 36" class="clickable">
+                    <img src="587F7921-1E2C-4D03-96D8-633059B8DC4D.JPEG" alt="Photo 36" class="clickable"> 
+                    <img src="677E0756-2193-41C7-A255-AD00D4FAA7D0.JPEG" alt="Photo 36" class="clickable">
+                    <img src="8D8067E2-B92F-434E-9C6C-5EADC760A302.JPEG" alt="Photo 36" class="clickable">
+                    <img src="1A05E91D-58E6-4662-BACB-2B4F060B85ED.JPEG" alt="Photo 36" class="clickable">
+                    <img src="1A7423CA-B74E-41D6-A67F-A29FC189F824.JPEG" alt="Photo 36" class="clickable">
+                    <img src="23B185A0-E772-4365-B3C6-3BC53C4BF82E.JPEG" alt="Photo 36" class="clickable">
+                    <img src="BE0BB056-C44C-43F0-A1D1-6A42EFEFEA30.JPEG" alt="Photo 36" class="clickable">
+                    <img src="80648181-3192-42DE-8CFD-2319C90A6D89 3.JPG" alt="Photo 36" class="clickable">
+                    <img src="56598F6F-83D4-4ED5-A6FF-6E0646B786E3 3.JPG" alt="Photo 36" class="clickable">
+                    <img src="5F3A7E80-8174-40C9-B0C8-512FB6CB40B5 3.JPG" alt="Photo 36" class="clickable">
+                    <img src="1718384667.2028.PNG" alt="Photo 36" class="clickable">
+                    <img src="1718384489.755653.PNG" alt="Photo 36" class="clickable">
+                    <img src="1718384363.449445.PNG" alt="Photo 36" class="clickable">
+                    <img src="1716964500.586092.JPG" alt="Photo 36" class="clickable">
+                    <img src="1716963984.782109.JPG" alt="Photo 36" class="clickable">
+                    <img src="79CD1509-4FFD-42B6-8942-075F614B73F7 3.JPG" alt="Photo 36" class="clickable">
+                    <img src="9A6AED71-D18A-4587-A6AA-2D2E38DD96DA.JPG" alt="Photo 36" class="clickable">
+                    <img src="6C28CCFE-85EC-406E-AF3A-9E50948EFEDD.JPG" alt="Photo 36" class="clickable">
+                    <img src="7C3D04E1-91B0-4B63-A6C0-52515406294E.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2759.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_5663 3.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5664 3.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5732 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5733.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5736.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5737.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5739.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5734 copy.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5740.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5741.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5742.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5743.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5744.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5745.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5746.jpg" alt="Photo 36" class="clickable">
+                    <img src="E1BCFFF5-5F07-4CF5-9723-8020EA959BC4.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_5747.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5748.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5749.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5750.jpg" alt="Photo 36" class="clickable">
+                    <img src="9AC99152-85B6-4213-A751-BF4B5295B2D3.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6879.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6848.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_6849 copy.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_6854 copy.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6855.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_6892.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5751.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_5752.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_0121.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4566.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4577.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4580.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4583 copy.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4585.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4563 copy.jpg" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 28.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 27.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4557.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_1652.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_1651.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_1648.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 17.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1372.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_1384.JPG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 20.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 29.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 34.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 35.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 36.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 9.PNG" alt="Photo 36" class="clickable">
+                    <img src="Jessa Fayer - 14.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_0940.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_0937.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_9443.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_9464.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_9560.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_9563.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_8558.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4973.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4974.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2691.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_2693.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_2695.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4977.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2706.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_2025.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_2474.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_3574 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3573 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3594 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3593 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3592 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3591 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3590 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3589 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_3588 2.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4268.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4336.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4340.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4272.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4332.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4485.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4271.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4502.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4503.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4504.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4269.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4506.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4507.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4508.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4505.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4512.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4267.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_4513.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_4334.jpg" alt="Photo 36" class="clickable">
+                    <img src="a.jpg" alt="Photo 24" class="clickable">
+                    <img src="b.jpg" alt="Photo 24" class="clickable">
+                    <img src="c.jpg" alt="Photo 24" class="clickable">
+                    <img src="d.jpg" alt="Photo 24" class="clickable">
+                    <img src="f.jpg" alt="Photo 24" class="clickable">
+                    <img src="d.jpg" alt="Photo 24" class="clickable">
+                    <img src="f copy.jpg" alt="Photo 24" class="clickable">
+                    <img src="f.jpg" alt="Photo 25" class="clickable">
+                    <img src="z.jpg" alt="Photo 26" class="clickable">
+                    <img src="sam.jpg" alt="Photo 27" class="clickable">
+                    <img src="who.jpg" alt="Photo 28" class="clickable">
+                    <img src="i.jpg" alt="Photo 29" class="clickable">
+                    <img src="l.jpg" alt="Photo 24" class="clickable">
+                    <img src="IMG_3318.jpg" alt="Photo 24" class="clickable">
+                    <img src="h.jpg" alt="Photo 24" class="clickable">
+                    <img src="IMG_8735.JPG" alt="Photo 24" class="clickable">
+                    <img src="aa.jpg" alt="Photo 24" class="clickable">
+                    <img src="bb.jpg" alt="Photo 24" class="clickable">
+                    <img src="e.jpg" alt="Photo 24" class="clickable">
+                    <img src="4126E739-6F69-4D72-A74B-2F105EEAC256 copy.JPEG" alt="Photo 24" class="clickable">
+                    <img src="aaa.jpg" alt="Photo 24" class="clickable">
+                    <img src="bbb.jpg" alt="Photo 24" class="clickable">
+                    <img src="ccc.jpg" alt="Photo 24" class="clickable">
+                    <img src="ddd.jpg" alt="Photo 24" class="clickable">
+                    <img src="aaa.jpg" alt="Photo 24" class="clickable">
+                    <img src="irene.jpg" alt="Photo 40" class="clickable">
+                    <img src="jess.jpg" alt="Photo 41" class="clickable">
+                    <img src="jessica.jpg" alt="Photo 42" class="clickable">
+                    <img src="heyjess.jpg" alt="Photo 43" class="clickable">
+                    <img src="king.jpg" alt="Photo 44" class="clickable">
+                    <img src="mommy.jpg" alt="Photo 14" class="clickable">
+                    <img src="daddy.jpg" alt="Photo 15" class="clickable">
+                    <img src="sir.jpg" alt="Photo 16" class="clickable">
+                    <img src="theman.jpg" alt="Photo 17" class="clickable">
+                    <img src="meme.JPG" alt="Photo 49" class="clickable">
+                    <img src="big.jpg" alt="Photo 50" class="clickable">
+                    <img src="lil.JPG" alt="Photo 51" class="clickable">
+                    <img src="little.JPG" alt="Photo 49" class="clickable">
+                    <img src="2H5A3269.JPG" alt="Photo 49" class="clickable">
+                    <img src="biggy.JPG" alt="Photo 80" class="clickable">
+                    <img src="ikr.JPG" alt="Photo 481" class="clickable">
+                    <img src="j.JPG" alt="Photo 581" class="clickable">
+                    <img src="jj.jpg" alt="Photo 582" class="clickable">
+                    <img src="jjjj.jpg" alt="Photo 584" class="clickable">
+                    <img src="jjjjj.JPG" alt="Photo 585" class="clickable">
+                    <img src="jjjjjj.JPG" alt="Photo 586" class="clickable">
+                    <img src="jjjjjjj.JPG" alt="Photo 587" class="clickable">
+                    <img src="jjjjjjjj.JPG" alt="Photo 588" class="clickable">
+                    <img src="jjjjjjjjj.JPG" alt="Photo 589" class="clickable">
+                    <img src="IMG_4989 copy.jpg" alt="Photo 510" class="clickable">
+                    <img src="o.JPG" alt="Photo 581" class="clickable">
+                    <img src="IMG_2876.JPG" alt="Photo 581" class="clickable">
+                    <img src="ihatemen.jpg.png" alt="Photo 581" class="clickable">
+                    <img src="1716964500.586092.JPG" alt="Photo 581" class="clickable">
+                    <img src="1716963984.782109.JPG" alt="Photo 581" class="clickable">
+                    <img src="1716806055.6721091.JPG" alt="Photo 581" class="clickable">
+                    <img src="1716796792.52145.JPG" alt="Photo 581" class="clickable">
+                    <img src="1716795474.227896.JPG" alt="Photo 581" class="clickable">
+                    <img src="IMG_4616.jpg" alt="Photo 581" class="clickable">
+                    <img src="IMG_9793.DNG" alt="Photo 581" class="clickable">
+                    <img src="372E3931-EABD-4156-A4A9-89750E2ACDE9.JPEG" alt="Photo 581" class="clickable">
+                    <img src="IMG_2876.JPG" alt="Photo 581" class="clickable">   
+                    <img src="sad.jpg" alt="Photo 24" class="clickable">
+                    <img src="ily.jpg" alt="Photo 25" class="clickable">
+                    <img src="kms.jpg" alt="Photo 26" class="clickable">
+                    <img src="lol.jpg" alt="Photo 27" class="clickable">
+                    <img src="sos.jpg" alt="Photo 28" class="clickable">
+                    <img src="1717758318.421046.JPG" alt="Photo 29" class="clickable">
+                    <img src="F26EC2FB-E092-4EFF-B851-87251FC6AB4F.JPG" alt="Photo 30" class="clickable">
+                    <img src="IMG_2547.jpg" alt="Photo 31" class="clickable">
+                    <img src="mom.jpg" alt="Photo 31" class="clickable">
+                    <img src="dad.jpg" alt="Photo 32" class="clickable">
+                    <img src="25.png" alt="Photo 35" class="clickable">
+                    <img src="24.png" alt="Photo 36" class="clickable">
+                    <img src="IMG_4304.JPG" alt="Photo 36" class="clickable">
+                    <img src="sovo.jpg" alt="Photo 36" class="clickable">
+                    <img src="XTv96.jpeg" alt="Photo 36" class="clickable">
+                    <img src="BE0BB056-C44C-43F0-A1D1-6A42EFEFEA30.JPEG" alt="Photo 36" class="clickable">
+                    <img src="IMG_5442.jpg" alt="Photo 36" class="clickable">
+                    <img src="IMG_7974.JPG" alt="Photo 36" class="clickable">
+                    <img src="IMG_7970.JPG" alt="Photo 36" class="clickable">
+                    <img src="1719242893.339015 3.PNG" alt="Photo 36" class="clickable">
+                    <img src="1719242751.4266272 3.PNG" alt="Photo 36" class="clickable">
+                    <img src="1719242712.7703052 3.PNG" alt="Photo 36" class="clickable">
+                    <img src="1719242220.276448.PNG" alt="Photo 36" class="clickable">
+                    <img src="1719250057.018146.jpg" alt="Photo 36" class="clickable">
+                    <img src="63080C57-0A6F-4F66-827E-A9727848F3CA.JPG" alt="Photo 36" class="clickable">
+                    <img src="1719257220.422295.PNG" alt="Photo 36" class="clickable">
+                    <img src="1719251695.579574.PNG" alt="Photo 36" class="clickable">
+                    <img src="1719252033.133183.PNG" alt="Photo 36" class="clickable">
+                    <img src="1719256777.588536.PNG" alt="Photo 36" class="clickable">
+                    <img src="IMG_5451.JPG" alt="Photo 36" class="clickable">
+                    <img src="" alt="Photo 36" class="clickable">
+                    <img src="" alt="Photo 36" class="clickable">
+                    <img src="" alt="Photo 36" class="clickable">
+                    <img src="" alt="Photo 36" class="clickable">
+                    <img src="k==.JPG" alt="Photo 36" class="clickable">
+
+                </div>
+            </div>
+            <h3>Video Reels</h3>
+            <video controls>
+                <source src="RPReplay_Final1673126965.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="9de20051006c4430bdcd9f62ffbf21f2.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Jessa Fayer. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const clickableImages = document.querySelectorAll('.clickable');
+        const closeBtn = document.querySelector('.close');
+
+        clickableImages.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
